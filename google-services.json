@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "567757061487",
+    "firebase_url": "https://ferma-v-ivanovo.firebaseio.com",
+    "project_id": "ferma-v-ivanovo",
+    "storage_bucket": "ferma-v-ivanovo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567757061487:android:d46b2cd2dd71547ef83c9a",
+        "android_client_info": {
+          "package_name": "com.fermaivanovo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567757061487-3eu5rb7639qhopco0tbtu4hvvg3m3m9h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fermaivanovo",
+            "certificate_hash": "c1edd7547dc1d398965e94ea21d6938dece826ef"
+          }
+        },
+        {
+          "client_id": "567757061487-41j6ncl6dg82p6cojlmbtm1t05m0oiin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbhtH7UExRLp6EaYLdCHSBLJtxUOojhjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567757061487-41j6ncl6dg82p6cojlmbtm1t05m0oiin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Моя Ферма</string>
+
+    <string-array name="Availability">
+        <item>В наличии</item>
+        <item>Заканчивается</item>
+        <item>Закончилось</item>
+    </string-array>
+</resources>

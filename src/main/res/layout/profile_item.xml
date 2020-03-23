@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2.5dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imageScale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/progress_image" />
+
+                            <ImageView
+                                android:id="@+id/mImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop" />
+
+                        </FrameLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingTop="25dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/mTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bookosb"
+                            android:text="Ферма в Иваново"
+                            android:textColor="#000000"
+                            android:textSize="25sp" />
+
+                        <ImageView
+                            android:id="@+id/image_goMap"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/ic_map"
+                            android:tint="@color/colorPrimaryDark" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/mAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/bookos"
+                            android:text="Адрес"
+                            android:textColor="#3C3C3C"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mCardContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            android:clickable="false"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/bookosb"
+                        android:text="Информация"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/mInformation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_expand_more" />
+
+                </LinearLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandableLayoutInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:ael_duration="500"
+                    app:ael_expanded="true"
+                    app:ael_interpolator="fastOutSlowIn"
+                    app:ael_orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/phoneLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/ic_phone"
+                                android:tint="@color/colorPrimaryDark" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bookos"
+                                android:text="Позвонить"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/mPhone"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/emailLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/ic_email"
+                                android:tint="@color/colorPrimaryDark" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bookos"
+                                android:text="Написать"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/mEmail"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/goodsCategories"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:id="@+id/ourGoods"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#81313131" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bookosb"
+                            android:gravity="center"
+                            android:text="Наша"
+                            android:textColor="#FFF"
+                            android:textSize="45sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bookosb"
+                            android:gravity="center"
+                            android:text="продукция"
+                            android:textColor="#FFF"
+                            android:textSize="25sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/bookosb"
+                        android:text="Описание"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/moreDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_expand_more" />
+
+                </LinearLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandableLayoutDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:ael_duration="500"
+                    app:ael_expanded="true"
+                    app:ael_interpolator="fastOutSlowIn"
+                    app:ael_orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/mDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/bookos"
+                            android:text="Описание Заведения"
+                            android:textColor="#3C3C3C"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mCardTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            android:clickable="false"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/bookosb"
+                        android:text="График работы"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/mTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_expand_more" />
+
+                </LinearLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandableLayoutTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:ael_duration="500"
+                    app:ael_expanded="true"
+                    app:ael_interpolator="fastOutSlowIn"
+                    app:ael_orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/moLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/Monday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:text="Понедельник"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/mMo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:gravity="end"
+                                android:text="10:00-01:00"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tuLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/Tuesday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:text="Вторник"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/mTu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:gravity="end"
+                                android:text="10:00-01:00"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/weLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/Wednesday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:text="Среда"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/mWe"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:gravity="end"
+                                android:text="10:00-01:00"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/thLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/Thursday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:text="Четверг"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/mTh"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:gravity="end"
+                                android:text="10:00-01:00"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/frLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/Friday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:text="Пятница"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/mFr"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:gravity="end"
+                                android:text="10:00-01:00"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/saLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/Saturday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:text="Суббота"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/mSa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:gravity="end"
+                                android:text="10:00-01:00"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/suLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/Sunday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:text="Воскресенье"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/mSu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bookos"
+                                android:gravity="end"
+                                android:text="10:00-01:00"
+                                android:textColor="#3C3C3C"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
